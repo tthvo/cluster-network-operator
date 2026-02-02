@@ -930,6 +930,8 @@ func isConversionToDualStackSupported(platformType configv1.PlatformType) bool {
 	switch platformType {
 	case configv1.BareMetalPlatformType, configv1.NonePlatformType, configv1.VSpherePlatformType:
 		return true
+	case configv1.AWSPlatformType:
+		return true
 	default:
 		return false
 	}
